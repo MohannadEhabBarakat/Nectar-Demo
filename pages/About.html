@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Nectar foundation</title>
+<link rel="icon" href="../logotrans.jpg">
+<link rel="stylesheet" id="font-awesome-four-css" href="../assets/css/font-awesome-4-menus/css/font-awesome.min.css" type="text/css" media="all">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../assets/css/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="../assets/css/colors.css" type="text/css" media="all">
+<link rel="stylesheet" id="responsiveslides-css" href="../assets/css/responsiveslides.css" type="text/css" media="all">
+<link rel="stylesheet" href="../assets/css/mohannad.css" type="text/css" media="all">
+<link rel="stylesheet" id="reponsive-css" href="../assets/css/reponsive.css" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Lobster%7CReem+Kufi" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="ea.js"></script><script>
+        $(document).ready(function() {
+            $('#brn').click(function() {
+                var h = $("<h3 class='imp-en-word no-font'>").text(document.getElementById("h_3").value);
+                var h2 = document.getElementById("h_3").value;
+                var pdata = document.getElementById("par").value;
+                var max = $("section>div").attr("id");
+                var p = $("<p>").text(document.getElementById("par").value) // Create text with jQuery
+                var txt3 = document.createElement("p");
+                var d = $("<div class='large-12 columns page-sub-title text-center'>");
+
+                if (document.getElementById("h_3").value != "" & document.getElementById("par").value != "") {
+                    $("section>div").append(d);
+
+                    $("section>div div:last-of-type").append($("<i class='fa fa-ellipsis-v' aria-hidden='true'>"));
+                    $("section>div div:last-of-type").append($("<i class='fa fa-pencil-square-o' aria-hidden='true' onclick='edit(this)'>"));
+                    $("section>div div:last-of-type").append($("<i class='fa fa-window-close' aria-hidden='true' onclick='del(this)'>"));
+                    $("section>div div:last-of-type").append(h);
+                    $("section>div div:last-of-type").append(p);
+                    $("section>div div:last-of-type").append($("<div class='button-container-2 edit_b'>"));
+                    $("section>div div:last-of-type>div").append($("<span class='mas'>Save"));
+                    $("section>div div:last-of-type>div").append($("<button type='button' name='Hover' onclick='edit_save(this)'>Save"));
+                    document.getElementById("h_3").value = "";
+                    document.getElementById("par").value = "";
+                    $("#h_r").prop("checked", false);
+                    $("#flot").css("display", "none");
+                    $("#add").css("display", "block");
+
+                } else {
+                    alert("please enter Head and Body");
+                    return;
+                };
+
+                $.ajax({
+                    url: 'about_e.php',
+                    type: 'GET',
+                    data: {
+                        m: h2,
+                        n: pdata,
+                        max: max
+                    },
+                    success: function(data) {
+                        alert(data);
+
+                    }
+                });
+                setTimeout(function() {
+                    location.reload();
+                }, 100);
+
+            });
+
+        });
+        $(document).ready(function() {
+            $('.fa-window-close').click(function() {
+                var e = $(this).parent().attr("id");
+                var max = $("section>div").attr("id");
+                alert(max)
+                $(this).parent().remove();
+                $.ajax({
+                    url: 'about_d.php',
+                    type: 'GET',
+                    data: {
+                        e: e,
+                        max: max
+                    },
+                    success: function(data) {
+                        alert(data);
+
+                    }
+                });
+                setTimeout(function() {
+                    location.reload();
+                }, 100);
+
+            })
+        });
+        $(document).ready(function() {
+            $('.edSave').click(function() {
+
+                dv = this.parentElement.parentElement;
+
+                var hi = dv.getElementsByTagName("textarea")[0].value;
+                var pi = dv.getElementsByTagName("textarea")[1].value;
+
+                var para = document.createElement("h3");
+                var node = document.createTextNode(hi);
+                para.appendChild(node);
+                para.classList.add('imp-en-word');
+                para.classList.add('no-font');
+                dv.appendChild(para);
+
+                tp = $("<textarea class='p'>").text(pi);
+
+                var para2 = document.createElement("p");
+                var node2 = document.createTextNode(pi);
+                para2.appendChild(node2);
+                dv.appendChild(para2);
+
+                dv.getElementsByTagName("textarea")[0].remove()
+                dv.getElementsByTagName("textarea")[0].remove()
+
+                dv.getElementsByClassName("edit_b")[0].style.display = "none";
+                dv.getElementsByClassName("edit_b")[1].style.display = "none";
+                var id = $(this).parent().parent().attr("id");
+                alert(hi)
+
+                $.ajax({
+                    url: 'about_edit.php',
+                    type: 'GET',
+                    data: {
+                        h: hi,
+                        p: pi,
+                        id: id
+                    },
+                    success: function(data) {
+                        alert(data);
+
+                    }
+                });
+                setTimeout(function() {
+                    location.reload();
+                }, 100);
+            })
+        });
+
+    </script><style type="text/css">
+        /*  body {
+                overflow: hidden;
+            }*/
+        
+        .fa {
+            float: left;
+            margin-top: 10px;
+        }
+        
+        .fa-pencil-square-o,
+        .fa-window-close {
+            margin-left: 20px;
+        }
+        
+        #flot {
+            position: fixed;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: auto;
+            background-color: rgba(128, 128, 128, 0.55);
+            display: none;
+        }
+        
+        #flot div {
+            width: 300px;
+            margin: auto;
+            margin-top: 50px;
+        }
+        
+        #flot div textarea:activate {
+            background-color: #fff;
+        }
+        
+        #add {
+            position: fixed;
+            margin: auto;
+            text-align: center;
+            margin-left: 50%;
+            font-size: 50;
+            color: rgb(188, 211, 226);
+            bottom: 0px;
+        }
+        
+        @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400");
+        @import url("https://fonts.googleapis.com/css?family=Roboto:100");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .header {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 34px;
+            margin-top: 12vh;
+        }
+        
+        .footer {
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+            margin-top: 15vh;
+        }
+        
+        .button-container-1 {
+            position: relative;
+            width: 100px;
+            height: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 6vh;
+            overflow: hidden;
+            border: 1px solid;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+            transition: 0.5s;
+            letter-spacing: 1px;
+            display: none;
+        }
+        
+        .button-container-1 button {
+            width: 101%;
+            height: 100%;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-size: 13px;
+            letter-spacing: 1px;
+            background: #000;
+            -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+            mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+            -webkit-mask-size: 2300% 100%;
+            mask-size: 2300% 100%;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            -webkit-animation: ani2 0.7s steps(22) forwards;
+            animation: ani2 0.7s steps(22) forwards;
+        }
+        
+        .button-container-1 button:hover {
+            -webkit-animation: ani 0.7s steps(22) forwards;
+            animation: ani 0.7s steps(22) forwards;
+        }
+        
+        .button-container-2 {
+            position: relative;
+            width: 100px;
+            height: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 7vh;
+            overflow: hidden;
+            border: 1px solid #000;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            transition: 0.5s;
+            letter-spacing: 1px;
+            display: none;
+        }
+        
+        .button-container-2 button {
+            width: 101%;
+            height: 100%;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            letter-spacing: 1px;
+            background: #000;
+            -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+            mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+            -webkit-mask-size: 3000% 100%;
+            mask-size: 3000% 100%;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            -webkit-animation: ani2 0.7s steps(29) forwards;
+            animation: ani2 0.7s steps(29) forwards;
+        }
+        
+        .button-container-2 button:hover {
+            -webkit-animation: ani 0.7s steps(29) forwards;
+            animation: ani 0.7s steps(29) forwards;
+        }
+        
+        .mas {
+            position: absolute;
+            color: #000;
+            text-align: center;
+            width: 101%;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            position: absolute;
+            font-size: 10px;
+            margin-top: 12px;
+            overflow: hidden;
+        }
+        
+        @-webkit-keyframes ani {
+            from {
+                -webkit-mask-position: 0 0;
+                mask-position: 0 0;
+            }
+            to {
+                -webkit-mask-position: 100% 0;
+                mask-position: 100% 0;
+            }
+        }
+        
+        @keyframes ani {
+            from {
+                -webkit-mask-position: 0 0;
+                mask-position: 0 0;
+            }
+            to {
+                -webkit-mask-position: 100% 0;
+                mask-position: 100% 0;
+            }
+        }
+        
+        @-webkit-keyframes ani2 {
+            from {
+                -webkit-mask-position: 100% 0;
+                mask-position: 100% 0;
+            }
+            to {
+                -webkit-mask-position: 0 0;
+                mask-position: 0 0;
+            }
+        }
+        
+        @keyframes ani2 {
+            from {
+                -webkit-mask-position: 100% 0;
+                mask-position: 100% 0;
+            }
+            to {
+                -webkit-mask-position: 0 0;
+                mask-position: 0 0;
+            }
+        }
+        
+        a {
+            color: #00ff95;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="page-section About-page page-section-60 en" style="visibility: visible;min-height: 100%;height: auto;"><div class="row clear-fix" id="p6">
+
+
+            <hr class="about-hr" id="a1">
+<div class="large-12 columns page-sub-title text-center" id="a6">
+                <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-pencil-square-o" aria-hidden="true" onclick="edit(this)"></i><i class="fa fa-window-close" aria-hidden="true" onclick="del(this)"></i>
+                <h3 class="imp-en-word no-font">jkklljiuhhh iuhk</h3>
+                <p>jlkjlkhjhu iuhu oh</p>
+                <div class="button-container-2 edit_b">
+                    <span class="mas">Save</span><button class="edSave" type="button" name="Hover">Save</button>
+                </div>
+                <div class="button-container-1 edit_b">
+                    <span class="mas">Cancle</span><button onclick="edit_cancel(this)" type="button" name="Hover">Cancle</button>
+                </div>
+            </div>
+        </div>
+    </section><i class="fa fa-plus-circle" aria-hidden="true" onclick="dis()" id="add"></i>
+    <div id="flot">
+        <div>
+            <span>Head</span><input id="h_3" type="text"><br><span>Paragraph</span><textarea id="par" type="text"></textarea><br><button onclick="" id="brn">Save</button>
+            <button onclick="cancel()">Calncel</button>
+        </div>
+    </div>
+
+</body>
+</html>

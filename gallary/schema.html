@@ -1,0 +1,73 @@
+<head>
+      <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
+      <link rel='stylesheet' id='font-awesome-four-css' href='../assets/css/font-awesome-4-menus/css/font-awesome.min.css' type='text/css' media='all'/>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta name="keywords" content="Nectar,Nectar Foundation,Nectar nonprofit,Nectar Egypt,نكتار,نكتار مصر,مؤسسة نكتار,نكتار غير هادفه للربح">
+      <meta name="description" content="Nectar Foundation Website">
+      <meta name="author" content="Mohannad Ehab Barakat">
+       
+      <title>Nectar Gallery</title>
+	  <link rel="icon" href="logotrans.jpg">
+      <link rel='stylesheet' href='../assets/css/mohannad.css' type='text/css' media='all' />
+      <link rel='stylesheet' href='../assets/css/style.css' type='text/css' media='all' />	 
+      <link rel='stylesheet' href='schema.css' type='text/css' media='all' />
+      
+      <script type="text/javascript" src="schema.js"></script>
+</head>
+<body>
+<section id="data">
+    <div class="row menu-row">
+               <div class="large-4 go-back schemadiv" >
+                  <i class="fa-arrow-left fa icon-x back" onclick="window.history.back()"></i>
+                  <a class="showMenu" href="../index.html#home"><i class="fa-home fa icon-x back"></i></a>
+               </div>
+               <div class="large-7 columns p-l-0">
+                  <h2>Gallery | البوم الصور</h2>
+               </div>
+            </div>
+<table style="width:100%;" id="myTable">
+<tr>
+    <td style="width:30%;" >
+        <img src="clipart-pin.png" width="50px" class="dabus a" onclick="prev('../assets/images/1.jpg')">
+        <img src="../assets/images/1.jpg" style="margin:20px;" class="sh example" onclick="prev('../assets/images/1.jpg')">
+    </td>
+    
+    <td style="width:30%;" class="">
+        <img src="clipart-pin.png" width="50px" class="dabus a" onclick="prev('../assets/images/2.jpg')">
+        <img src="../assets/images/2.jpg" class="sh example" onclick="prev('../assets/images/2.jpg')">
+    </td>
+    
+    <td style="width:30%;" class="">
+        <img src="clipart-pin.png" width="50px" class="dabus a" onclick="prev('../assets/images/3.jpg')">
+        <img src="../assets/images/3.jpg" class="sh example" onclick="prev('../assets/images/3.jpg')">
+    </td>
+    
+</tr>
+</table>
+</section>
+
+    <div id="showimg"><img src="../assets/images/1.jpg" width="100%" id="previmg">
+        <div class="topright" onclick="antiprev()"><i class="fa fa-times-circle-o fa-2x" ></i></div>
+    </div>
+    <script>
+     var imgs=document.getElementById("myTable").querySelectorAll(".example")
+    var ipoint=document.getElementById("myTable").querySelectorAll(".a")
+    for (var x = 0; x < imgs.length; x++) {
+            var rot = Math.floor(Math.random() *21)-10;
+            n="rotate("+rot+"deg)";
+            // Code for Safari
+            ipoint[x].style.WebkitTransform = n; 
+            // Code for IE9
+            ipoint[x].style.msTransform = n;
+            // Standard syntax
+            ipoint[x].style.transform = n;
+            // Code for Safari
+            imgs[x].style.WebkitTransform = n; 
+            // Code for IE9
+            imgs[x].style.msTransform = n;
+            // Standard syntax
+            imgs[x].style.transform = n;
+    }</script>
+
+</body>
