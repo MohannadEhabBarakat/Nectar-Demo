@@ -21,7 +21,7 @@ if (ctype_alnum ($username)){
         
         if (password_verify ($pass,$row["pass"])){
             $_SESSION["al"] = $user;
-            header("Location: /a/index.php");
+            header("Location: index.html");
             exit();
         }
         else{echo "Go to hell my dear hacker";}

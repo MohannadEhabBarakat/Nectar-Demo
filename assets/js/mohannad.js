@@ -39,7 +39,7 @@ function arvsen() {
     if (url.match(hashtag) == "#") {
         txt = url.split("#")[1];
         if (txt=="About"){
-            document.getElementById("ifAbout").src="/pages/About.html";
+            document.getElementById("ifAbout").src="/pages/About/About.html";
         }
     } else {
         en();

@@ -1,5 +1,6 @@
 <?php 
 session_start();
+if (isset($_SESSION["al"])){
 echo $_GET["m"];
 echo $_GET["n"];
 
@@ -37,14 +38,14 @@ $div->appendChild($i1);
 $div->appendChild($i2);
 $div->appendChild($i3);
 
-$i1->setAttribute("class", "fa fa-ellipsis-v");
+$i1->setAttribute("class", "fa fa-ellipsis-v sp");
 $i1->setAttribute("aria-hidden", "true");
 
-$i2->setAttribute("class", "fa fa-pencil-square-o");
+$i2->setAttribute("class", "fa fa-pencil-square-o sp");
 $i2->setAttribute("aria-hidden", "true");
 $i2->setAttribute("onclick", "edit(this)");
 
-$i3->setAttribute("class", "fa fa-window-close");
+$i3->setAttribute("class", "fa fa-window-close sp");
 $i3->setAttribute("aria-hidden", "true");
 $i3->setAttribute("onclick", "del(this)");
 
@@ -97,4 +98,7 @@ $parent->setAttribute("id", "p".($maxNum+2));
 echo 'Wrote: ' . $dom->saveHTMLFile("About.html") . ' bytes';
 echo ("ya rab :)");
 libxml_clear_errors();
+    }else{
+    echo ("ya rab :) adkol");
+}
 ?>

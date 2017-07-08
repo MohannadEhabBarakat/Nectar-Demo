@@ -28,8 +28,6 @@
     <link rel='stylesheet' href='assets/css/mohannad.css' type='text/css' media='all' />
     <link rel='stylesheet' id='reponsive-css' href='assets/css/reponsive.css' type='text/css' media='all' />
     <link href="https://fonts.googleapis.com/css?family=Lobster|Reem+Kufi" rel="stylesheet">
-
-
 </head>
 
 <body onload="wait()">
@@ -55,7 +53,7 @@
                     <a href="#About"><i class="fa-comment fa color-1"></i>About&nbsp;our&nbsp;solar&nbsp;system</a>
                 </li>
                 <li>
-                    <a href="#underconstraction"><i class="fa-wrench fa color-12"></i>Industry plant</a>
+                    <a href="#Industry"><i class="fa-wrench fa color-12"></i>Industry plant</a>
                 </li>
                 <li>
                     <a href="#underconstraction"><i class=" fa-flask fa color-9"></i>Science&nbsp;Competitions</a>
@@ -131,7 +129,7 @@
                         <div class="large-8 columns">
                             <h1 class="site-name">
                                 <a href="#home-page"><img src="logotrans.jpg" width="150px" id="logo">
-                                    <p>Nectar&nbsp;Foundation</p><sub>&nbsp;&nbsp;Our&nbsp;solar&nbsp;system</sub>
+                                    <p style="display: inline;">Nectar&nbsp;Foundation</p><sub>&nbsp;&nbsp;Our&nbsp;solar&nbsp;system</sub>
                                     <hr>
                                 </a>
                             </h1>
@@ -160,7 +158,7 @@
                                 </div>
 
                                 <div class='six small-6 columns contact-box space'>
-                                    <div class='color-12'>
+                                    <div class='color-12' onclick="speedup('Services')">
                                         <a href='#Services'>
                                             <span class='box-title'>Services plant</span>
                                             <br/>
@@ -169,12 +167,12 @@
                                     </div>
                                 </div>
                                 <div class='twelve large-12 columns space featured blog-box medium'>
-                                    <div class='color-4'> <span class='box-title anim'><a href='#underconstraction'>Success Stories</a></span>
+                                    <div class='color-4' onclick="speedup('Team')"> <span class='box-title anim'><a href='Successstories'>Success Stories</a></span>
                                         <span class='featured-image'>
                                  <img width="400" height="400" src="assets/images/1.jpg" alt="some tile" />
                                  </span>
                                         <span class='featured-box-title'>
-                                 <a href='#underconstraction'>Nectarians' Success</a>
+                                 <a href='Successstories'>Nectarians' Success</a>
                                  </span>
                                     </div>
                                 </div>
@@ -197,7 +195,7 @@
                         <div class="four large-4 columns">
                             <div class="row">
                                 <div class='six small-6 columns contact-box space'>
-                                    <div class='color-2'>
+                                    <div class='color-2' onclick="speedup('Team')">
                                         <a href='#Team'>
                                             <span class='box-title sub'>Nectar citizens <br><sub>-Our team-</sub></span>
                                             <br/>
@@ -206,8 +204,8 @@
                                     </div>
                                 </div>
                                 <div class='six small-6 columns contact-box space'>
-                                    <div class='color-12'>
-                                        <a href='#underconstraction'>
+                                    <div class='color-12' onclick="speedup('Industry')">
+                                        <a href='pages/Industry.html'>
                                             <span class='box-title'>Industry plant</span>
                                             <br/>
                                             <i class='fa-wrench fa fa-4x'></i>
@@ -288,7 +286,7 @@
                                     </div>
                                 </div>
                                 <div class='six small-6 columns contact-box space'>
-                                    <div class='color-12'>
+                                    <div class='color-12' onclick="speedup('Media')">
                                         <a href='#Media'>
                                             <span class='box-title'>Media Plant</span>
                                             <br/>
@@ -336,7 +334,7 @@
                     <i class="fa-arrow-left fa icon-x back" onclick="window.history.back()"></i>
                 </div>
                 <div class="large-7 columns p-l-0">
-                    <h2>About&nbsp;Nectar <sub>-&nbsp;Nectar&nbsp;from&nbsp;telescope-</sub></h2>
+                    <h2>About Nectar <sub>-Nectar from telescope-</sub></h2>
                     <hr class="title-hr">
                 </div>
                 <div class="large-4 columns menu-button text-right">
@@ -347,7 +345,7 @@
                     <a href="#About" class="lang en_active" onclick="en()">EN</a>
                 </div>
             </div>
-            <iframe src="" width="100%" height="100%" id="ifAbout"></iframe>
+            <iframe id="ifAbout" width="100%" height="80%"></iframe>
 
         </section>
         <section class="page-section Team-page page-section-21 en">
@@ -367,197 +365,8 @@
                     <a href="#Team" class="lang en_active" onclick="en()">EN</a>
                 </div>
             </div>
-            <div class="row clear-fix data">
-                <p>We have an integrated team comes from all various fields such as, Knowledge, Education, and Industry. The common factor in our team is the sensory manner and passion which gathered them to develop and save the services that help in developing the whole knowledge system including “Researcher and Entrepreneur” with clear vision and goal to achieve the greatest purpose which depends on reviving the role of “Economy-Based Knowledge”. All our team members are believes that the greatest goal will never be achieved without the existence of passion and tender love that push us forward to achieve it.</p>
-                <h3 class="imp-en-word">Board</h3>
-                <hr class="about-hr">
-                <ul class="small-block-grid-1 large-block-grid-3 text-center">
-                    <li>
-                        <div class="team-member-item">
-                            <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/ehab%20barakat.png" alt="Ehab Barakat" style="margin-top: -45px;margin-right: -3px;" />
-                            </div>
-                            <h3 class="team-member-name">Ehab Barakat</h3>
-                            <h4>Founder&amp;Chairman of the board of trustees
-                            </h4>
-                            <div class="team-member-desc text-left">
-                                <ul>
-                                    <li>BA, and MA in Electronic and Biomedical Engineering</li>
-                                    <li>University Diploma in Management</li>
-                                    <li>Head of Grand Award Judges, Intel ISEF-Egypt</li>
-                                    <li>Grand Award Judge, Intel ISEF</li>
-                                    <li>Grand Award Judge, Intel Science Competition-Arab region (ISC-Arab)</li>
-                                    <li>WHO Consultant</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="team-member-item">
-                            <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/Arousy.jpg" alt="Ahmed Elarousy" />
-                            </div>
-                            <h3 class="team-member-name">Ahmed Elarousy</h3>
-                            <h4>Treasurer, NECTAR Foundation for Development</h4>
-                            <div class="team-member-desc text-left">
-                                <ul>
-                                    <li>ICT Consultant</li>
-                                    <li>Technical Officer for Customer Support Services and leading the Customer Support team in a the Regional Office of a UN Organization stationed in Cairo, Egypt.</li>
-                                    <li>Conducting and facilitating many meetings related to my profession in most of the Middle East countries as well as in Europe.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="team-member-item">
-                            <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/dr-annie.png" alt="Annie Shebanow" />
-                            </div>
-                            <h3 class="team-member-name">Annie Shebanow</h3>
-                            <h4>Board Advisor</h4>
-                            <div class="team-member-desc text-left">
-                                <p>Dr. Annie Shebanow is an engineer and entrepreneur. She is the founder of several technology companies. Annie’s latest research is on exploring how the application of big data analytics affects cyber security malicious-code detection. An avid advocate for female engineers, she established the Ph.D. Women of Silicon Valley Organization for networking and exchanging research ideas. Annie is an advisor for new startup companies in Silicon Valley.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li></li>
-                    <li>
-                        <div class="team-member-item">
-                            <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/Nada-mod.jpg" alt="Nada Elassal" />
-                            </div>
-                            <h3 class="team-member-name">Nada Elassal</h3>
-                            <h4>Designer</h4>
-                            <div class="team-member-desc text-left">
-                                <p><b>Nada Elassal</b> has a Master’s degree in Computer Science from York University, Toronto, Canada. She earned her Bachelor degree in Computer Science from Alexandria University, Egypt. Passionate about education and technology, Nada has held a Software Engineering position at Google, UK as well as a Research Assistant position at the Human and Computer Vision Lab at York University. In 2011, she launched YouTeach, a social venture in Egypt with the goal of improving science education and science communication of K-12 students. The venture was seed funded by Ashoka international organization and impacted more than 100 students at different schools in Alexandria. In 2016, Nada founded and is currently leading her own software company BridgEd in Canada, specialized in developing innovative educational software utilizing cutting edge machine learning technology to revolutionize the way young people learn.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li></li>
-                    <hr class="about-hr">
-                    <h3 class="imp-en-word">Team members</h3>
-                    <li>
-                        <div class="team-member-item">
-                            <div class="team-member-picture">
-                                <img width="400" height="300" src="" alt="College student" />
-                            </div>
-                            <h3 class="team-member-name">Azza Faiad</h3>
-                            <h4>Team member</h4>
-                            <div class="team-member-desc text-left">
-                                <p>With an environment that is rapidly becoming more affected by the toxic waste we create, Azza Faiad set out to find a solution for this worldwide expanding problem. At the age of only 16, she came up with an idea to convert plastic waste into hydrocarbon fuel by using a low-cost catalyst. Her idea was awarded the EFDA-JET prize at the 23rd European Union Contest for Young Scientists. A successive win was achieved in Turkey when she and a teammate won a gold medal during the 21st International Environmental project Olympiad for their research on the same topic. At such a young age she admits that the atmosphere of competition and representing Egypt in international competitions were her biggest life lessons so far.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="team-member-item">
-                            <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/10.jpg" alt="College student" />
-                            </div>
-                            <h3 class="team-member-name">Ahmed Abuamra</h3>
-                            <h4>Team member</h4>
-                            <div class="team-member-desc text-left">
-                                <p>Abuamra is a bronze medalist in EOI (Egyptian Olympiad in informatics) in 2015. He has attended the international Olympiad in informatics camp in AAST for two months (2015) and competed in ACM ECPC (Egyptian Collegiate Programming Contest) 2015. He has written +10000 line of code. Abuamra believes in scientific research, He has participated in GyST (GESR young science talents program). Abuamra likes helping people, He is a volunteer at Resala Charity Organization. He is giving lectures to high shool students about “How to Program” and “How to compete in EOI”.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="team-member-item">
-                            <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/AmiraGabr.jpg" alt="College student" />
-                            </div>
-                            <h3 class="team-member-name">Amira Gabr</h3>
-                            <h4>Team member</h4>
-                            <div class="team-member-desc text-left">
-                                <p>Amira is a 19 year old volunteer with NECTAR. She has a great passion about science and community service and a great interest in Biomedical Engineering and Biotechnology. Amira uses volunteer work to share her experience in research and teach and encourage more students to innovate and get involved in STEM. She is also interested in Education, Human & Women Rights and participates in Breast Cancer Awareness Campaigns. She was selected by the U.S. Embassy in Cairo to participate in Women2Women International Leadership Program 2015 which was held in Boston, MA, the United States of America. Amira is currently getting ready to go to college in the United States after winning a full scholarship from the U.S. Agency of International Development (U.S.A.I.D).</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="team-member-item">
-                            <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/HagarMarzouk.jpg" alt="College student" style="margin-top: -55px;">
-                            </div>
-                            <h3 class="team-member-name">Hagar Marzouk</h3>
-                            <h4>Team member</h4>
-                            <div class="team-member-desc text-left">
-                                <p>My name is Hagar Marzouk. I am 18-year-old girl, and in a word, I am an engineering geek from the heart. Recently, I was named by Robohub as one of the "25 women in robotics I addicted to the scientific way of thinking, since my early start in 2010 to participate in scientific fairs as Intel ISEF for (2011 till 2014), Google Science Fair and participate at many scientific conferences</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="team-member-item">
-                            <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/EnasSafwat.jpg" alt="College student" />
-                            </div>
-                            <h3 class="team-member-name">Enas Safwat</h3>
-                            <h4>Team member</h4>
-                            <div class="team-member-desc text-left">
-                                <p>Enas Safwat is a member at Nectar Foundation, EYouth and El-mashrou3 team. She is a senior high school student .She is a facilitator at EYouth .She has worked in EYouth as an organizer for a year then as a facilitator. In 2014, She participated in IMSEF competition held in the Upper Egypt with a team project and the team won the second place in the category of computer science and the project was further qualified to participate in International Science and Engineering fair in Los Anglos , California ,US. She is interested in entrepreneurship, science and poetry.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="team-member-item">
-                            <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/Sara%20Ezat.jpg" alt="Sara Ezat" />
-                            </div>
-                            <h3 class="team-member-name">Sara Ezat</h3>
-                            <h4>Team member</h4>
-                            <div class="team-member-desc text-left">
-                                <p>Sara Ezat is a member at Nectar Foundation, Zewail City Friends and Life Makers Organization. She is a graduate of STEM school in Ma'adi, Cairo, Egypt. Sara got the student of the year Award for 2014 presented by the Planetarium Science Center in Alexandria, Egypt. She was one of 22 girls who were selected to presented by have a full-paid scholarship to study in US USAID. She is interested in doing scientific research, reading, and learning anything new. </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="team-member-item">
-                            <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/Mona.jpg" alt="Mona El Sayed Moawad" style="margin-top: -20px;">
-                            </div>
-                            <h3 class="team-member-name">Mona El Sayed Moawad</h3>
-                            <h4>Team member</h4>
-                            <div class="team-member-desc text-left">
-                                <p>Mona is a member at Nectar foundation and Resala charity. She graduated from Maadi STEM School for girls 2015/2016, she is interested in scientific research. Mona was honored by Dr. Essam Heggy and got the student of the year 2014 which presented by The Planetarium Science Center of Alexandria bibliotheca. Mona was one of the 22 girls who won full scholarship from USAID to study abroad. She is interested in Neuro Science, Genetics and biomedical engineering.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="team-member-item">
-                            <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/EnasSafwat.jpg" alt="College student" />
-                            </div>
-                            <h3 class="team-member-name">Enas Safwat</h3>
-                            <h4>Team member</h4>
-                            <div class="team-member-desc text-left">
-                                <p>Enas Safwat is a member at Nectar Foundation, EYouth and El-mashrou3 team. She is a senior high school student .She is a facilitator at EYouth .She has worked in EYouth as an organizer for a year then as a facilitator. In 2014, She participated in IMSEF competition held in the Upper Egypt with a team project and the team won the second place in the category of computer science and the project was further qualified to participate in International Science and Engineering fair in Los Anglos , California ,US. She is interested in entrepreneurship, science and poetry.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="team-member-item">
-                            <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/EnasSafwat.jpg" alt="Raneem Leil" />
-                            </div>
-                            <h3 class="team-member-name">Raneem Leil</h3>
-                            <h4>Team member</h4>
-                            <div class="team-member-desc text-left">
-                                <p>Raneem is a member at Nectar Foundation, a volunteer in Resala Charity and the good for Damietta Charity,a member of the integral science group in the faculty of science , Damietta university and a member at the youth committee to serve Damietta governorate. In 2015, she participated in Intel Bibliotheca Alexandrina Science and Engineering Fair and got first place in the category of Animal scienceShe is interested in doing scientific research and co-operating with others to work on spreading the concept of scientific thinking.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="team-member-item">
-                            <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/Rahma%20Leil.jpg" alt="Rahma Leil" />
-                            </div>
-                            <h3 class="team-member-name">Rahma Leil</h3>
-                            <h4>Team member</h4>
-                            <div class="team-member-desc text-left">
-                                <p>Rahma is a member at Nectar foundation. She participated in Intel Bibliotheca Alexandrina Science and Engineering Fair for two successive years (2013 ,2014).In 2014,She was the first in the category of Microbiology and she was further qualified to participate in Intel Science Competition in Arab world held in Doha, Qatar. She is interested in Environmental and Microbiology research , taking online courses in several fields and co-operating with colleagues in laboratory to do research of high quality and get precise results.</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            <iframe id="ifTeam" width="100%" height="4475"></iframe>
+
         </section>
         <section class="page-section Contact-page page-section-117 en">
             <div class="row menu-row">
@@ -614,7 +423,7 @@
                 </div>
             </div>
         </section>
-        <section class="page-section Media-page page-section-41 en" id="media">
+        <section class="page-section Media-page page-section-41 en" id="Media">
             <div class="row menu-row entxt">
                 <div class="large-1 go-back">
                     <i class="fa-arrow-left fa icon-x back" onclick="window.history.back()"></i>
@@ -647,148 +456,9 @@
                     <i class="fa-arrow-right fa icon-x back" onclick="window.history.back()"></i>
                 </div>
             </div>
-            <div class="row clear-fix">
-                <div class="row  blog-page">
-                    <div class="view view-blog view-id-blog view-display-id-block view-dom-id-0c4bf026824ced108c3a32120e9abc56">
-                        <div class="view-content">
-                            <!-- Poste -->
-                            <ul id="i-scroll" class="small-block-grid-1 large-block-grid-3">
-                                <li class="">
-                                    <article class="article">
-                                        <a href="/gallary/no.html" title="UNESCO IBSP Program">
-                                            <img width="800" height="380" src="logotrans.jpg" alt="Nectar logo" />
-                                        </a>
-                                        <div class="post-body">
-                                            <h2 class="entxt"><a href="/gallary/no.html">UNESCO IBSP Program:</a></h2>
-                                            <p class="entxt">Prepared a comprehensive technical report for the science education internet portal. The portal will include different modules as Inquiry-Based science education, research methodology and projects, and basic science education.</p>
-                                            <h2 class="artxt"><a href="/gallary/no.html">برنامج اليونسكو IBSP:</a></h2>
-                                            <p class="artxt">إعداد تقرير فني شامل لجميع المواقع الإلكترونية المختصة بتعليم العلوم الأساسية وذلك تمهيدا لإنشاء موقع الكتروني يشمل قطاعات تدريبية مختلفة مثل التعليم القائم علي المعرفة ومنهجية البحث العلمي والعلوم الأساسيه</p>
-                                        </div>
-                                    </article>
-                                </li>
-                                <li class="">
-                                    <article class="article">
-                                        <a href="/gallary/USA-Visit.html" title="USA Visit">
-                                            <img width="800" height="380" src="assets/images/Pennsylvania%20State%20University1.JPG" alt="USA Visit" />
-                                        </a>
-                                        <div class="post-body">
-                                            <h2 class="entxt"><a href="/gallary/USA-Visit.html">USA Visit:</a></h2>
-                                            <p class="entxt">Visit the center for Nanotechnology Education and Utilization (CNEU) and the National Science Foundation’s (NSF) Nanotechnology Application and Career Knowledge (NACK) Network at the Pennsylvania State University, to discuss possible collaboration with the CNEU in developing graduate educational programs for students and technical staff in Egypt and Middle East. In addition, opportunities of promoting nanotechnology education in local universities have been explored</p>
-                                            <h2 class="artxt"><a href="/gallary/USA-Visit.html">زيارة جامعة بنسلفينيا بالولايات المتحدة الامريكية:</a></h2>
-                                            <p class="artxt">قام دكتور إيهاب بركات مؤسس وممثل مؤسسة نكتار بزيارة مركز تعليم وإستخدام النانوتكنولوجي وتطبيقاتها بجامعة بنسلفنيا وذلك لمناقشة فرص التعاون المشترك للقيام على تطوير برنامج تعليمي لخريجي الجامعات في مجال النانوتكنولجي بالإضافة إلي دراسة فرص تطوير تعليم النانوتكنولجي في الجامعات المحلية</p>
-                                        </div>
-                                    </article>
-                                </li>
-                                <li class="">
-                                    <article class="article">
-                                        <a href="/gallary/UNESCO-MOHE-High-Level-Forum.html" title="UNESCO / MOHE High Level Forum">
-                                            <img width="800" height="380" src="assets/images/2.jpg" alt="UNESCO / MOHE High Level Forum" />
-                                        </a>
-                                        <div class="post-body">
-                                            <h2 class="entxt"><a href="/gallary/UNESCO-MOHE-High-Level-Forum.html">UNESCO / MOHE High Level Forum:</a></h2>
-                                            <p class="entxt">NECTAR foundation represented the Egyptian specialized NGOs on Education and research field during the round table discussion about “Galvanizing Higher Education &amp; Scientific Research towards an Innovation Economy”</p>
-                                            <h2 class="artxt"><a href="/gallary/UNESCO-MOHE-High-Level-Forum.html">منتدى رفيع المستوى – منظمة اليونسكو و وزارة التعليم العالي:</a></h2>
-                                            <p class="artxt">بدعوة من منظمة اليونسكو قامت المؤسسة بتمثيل المؤسسات الأهلية والغير هادفة للربح في هذا المنتدي وكذلك حضور المائدة المستديرة وجلسات النقاش حول "تعزيز قدرات منظومة التعليم العالي والبحث العلمي نحو إقتصاد الإبتكار"</p>
-                                        </div>
-                                    </article>
-                                </li>
-                                <li class="">
-                                    <article class="article">
-                                        <a href="/gallary/UNESCO-MOHE-High-Level-Forum.html" title="UNESCO / MOHE High Level Forum">
-                                            <img width="800" height="380" src="assets/images/2.jpg" alt="UNESCO / MOHE High Level Forum" />
-                                        </a>
-                                        <div class="post-body">
-                                            <h2 class="entxt"><a href="/gallary/UNESCO-MOHE-High-Level-Forum.html">UNESCO / MOHE High Level Forum:</a></h2>
-                                            <p class="entxt">NECTAR foundation represented the Egyptian specialized NGOs on Education and research field during the round table discussion about “Galvanizing Education towards a Knowledge-based Economy"</p>
-                                            <h2 class="artxt"><a href="/gallary/UNESCO-MOHE-High-Level-Forum.html">منتدى رفيع المستوى – منظمة اليونسكو و وزارة التربية و التعليم</a></h2>
-                                            <p class="artxt">وإستكمالا لما بدأته المؤسسة في الثالث والعشرين من نوفمبر 2014 اسئنفت المؤسسة سعيها الحثيث وذلك في الرابع والعشرين من نوفمبرالموافق لنفس العام حيث قامت المؤسسة بتمثيل المؤسسات الأهلية والغير هادفة للربح في هذا المنتدي وكذلك حضور المائدة المستديرة وجلسات النقاش حول "تعزيز قدرات منظومة التعليم نحو إقتصاد المبني على المعرفة"</p>
-                                        </div>
-                                    </article>
-                                </li>
-                                <li class="">
-                                    <article class="article">
-                                        <a href="#" title="ISC Arab – Qatar">
-                                            <img width="800" height="380" src="logotrans.jpg" alt="ISC Arab – Qatar" />
-                                        </a>
-                                        <div class="post-body">
-                                            <h2 class="entxt"><a href="/gallary/no.html">ISC Arab – Qatar:</a></h2>
-                                            <p class="entxt">Dr. Ehab Barakat (NFD FOUNDER) co-chairing the judges committee, leading and training the judges through an induction session, and nominated to winners.</p>
-                                            <h2 class="artxt"><a href="/gallary/no.html">مسابقة أيسف للعالم العربي - قطر:</a></h2>
-                                            <p class="artxt">نوفمبر لعام 2014 تم اختيار الدكتور إيهاب بركات مؤسس وممثل مؤسسة نكتار كنائب رئيس لجنة التحكيم بمسابقة أيسف عرب بقطر وقد تم تكليفة بقيادة لجنة التحكيم وكذلك تدريب المحكمين وإدارة الجلسات النقاشية بين المحكيمن لإختيار الفائزين على مستوى العالم العربي</p>
-                                        </div>
-                                    </article>
-                                </li>
-                                <li class="">
-                                    <article class="article">
-                                        <a href="/gallary/Intel-ISEF–Egypt.html" title="Intel ISEF – Egypt">
-                                            <img width="800" height="380" src="assets/images/Announcing%20winners.JPG" alt="Intel ISEF – Egypt" />
-                                        </a>
-                                        <div class="post-body">
-                                            <h2 class="entxt"><a href="/gallary/Intel-ISEF–Egypt.html">Intel ISEF – Egypt:</a></h2>
-                                            <p class="entxt">NECTAR judging team assigned to manage and lead the judging committee, appraising the wining projects nominated to Intel ISEF 2015 and preparing the Intel ISEF 2015 finalist.</p>
-                                            <h2 class="artxt"><a href="/gallary/Intel-ISEF–Egypt.html">Intel مسابقة انتل ايسف - مصر :</a></h2>
-                                            <p class="artxt">فبراير لعام 2015 تم إسناد إلي فريق تحكيمي من نكتار ادارة وقيادة لجنة التحكيم وتقييم المشاريع الفائزة وترشيح المؤهل منها لإنتل أيسف 2015 وكذلك تدريب وإعداد المتسابقين قبل السفر الي المسابقة النهائية بولاية بنسلفانيا الأمريكية</p>
-                                        </div>
-                                    </article>
-                                </li>
-                                <li class="">
-                                    <article class="article">
-                                        <a href="/gallary/Intel-ISEF–Egypt.html" title="Intel ISEF – Upper Egypt">
-                                            <img width="800" height="380" src="assets/images/13.jpg" alt="Intel ISEF – Upper Egypt" />
-                                        </a>
-                                        <div class="post-body">
-                                            <h2 class="entxt"><a href="/gallary/Intel-ISEF–Egypt.html">Intel ISEF – Upper Egypt:</a></h2>
-                                            <p class="entxt">NECTAR judging team assigned to manage and lead the judging committee, appraising the wining projects nominated to Intel ISEF 2015 and preparing the Intel ISEF 2015 finalist.</p>
-                                            <h2 class="artxt"><a href="/gallary/Intel-ISEF–Egypt.html">Intel مسابقة إنتل أيسف- بصعيد مصر:</a></h2>
-                                            <p class="artxt">تم إسناد قيادة لجنة التحكيم في معرض العلوم والهندسة بصعيد مصر وتقييم المشاريع المقدمة للمسابقة في مارس من عام 2015 الي فريق نكتار وذلك لتقييم المشاريع الفائزة وترشيح الفائز منها وتدريبهم لتمثيل مصر في ولاية بنسلفانيا بأمريكا</p>
-                                        </div>
-                                    </article>
-                                </li>
-                                <li class="">
-                                    <article class="article">
-                                        <a href="/gallary/Qatar-STEAM-Fair.html" title="Qatar STEAM Fair">
-                                            <img width="800" height="380" src="assets/images/6-1.jpg" alt="Qatar STEAM Fair" />
-                                        </a>
-                                        <div class="post-body">
-                                            <h2 class="entxt"><a href="/gallary/Qatar-STEAM-Fair.html">Qatar STEAM Fair:</a></h2>
-                                            <p class="entxt">Dr. Ehab Barakat (NFD FOUNDER) co-chairing the judges committee, played an important role in the scientific review committee, leading and training the judges through an induction session, appraising the wining projects nominated to Intel ISEF 2015 and preparing the Intel ISEF 2015 finalist.</p>
-                                            <h2 class="artxt"><a href="/gallary/Qatar-STEAM-Fair.html">معرض قطر لللعلوم والهندسه :</a></h2>
-                                            <p class="artxt">في مارس من عام 2015 تواجد الدكتور إيهاب بركات ) مؤسس مؤسسة نكتار ) لجنة التحكيم في معرض العلوم والهندسة بقطر والذي كان له دورا مهما في توجيه وقيادة فريق المحكمين ,فقد قام بعقد الجلسات التمهيدية والتدريبية للسادة المحكيمن من مختلف الجامعات والهيئات وإدارة نقاشات اختيار الفائزين المؤهلين للاشتراك بمسابقة إنتل ايسف بولاية ينسلفانيا الأمريكية لعام 2015. وقد شرف ايضا بالإلقاء كلمة لجنة التحكيم في الحفل الختامي لتوزيع الجوائز</p>
-                                        </div>
-                                    </article>
-                                </li>
-                                <li class="">
-                                    <article class="article">
-                                        <a href="/gallary/Kuwait-Fair.html" title="Kuwait Science and Engineering Fair">
-                                            <img width="800" height="380" src="logotrans.jpg" alt="Kuwait Science and Engineering Fair" />
-                                        </a>
-                                        <div class="post-body">
-                                            <h2 class="entxt"><a href="/gallary/no.html">Kuwait Science and Engineering Fair:</a></h2>
-                                            <p class="entxt">NECTAR founder invited as trainer and co-chair for the judging committee.</p>
-                                            <h2 class="artxt"><a href="/gallary/no.html">معرض الكويت للعلوم والهندسه :</a></h2>
-                                            <p class="artxt">في أبريل من عام 2015 تم تواجد ممثل نكتار كنائب رئيس للجنة التحكيم في معرض العلوم والهندسة بالكويت وعقد دورة تدريبية للسادة المحكيمن المشاركين وكذلك إدارة جلسات النقاش التحكيمية لإختيار الفائزين والمؤهلين لمسابقة إنتل أيسف العالمية</p>
-                                        </div>
-                                    </article>
-                                </li>
-                                <li class="">
-                                    <article class="article">
-                                        <a href="/gallary/no.html" title="Misr Elkhir Foundation">
-                                            <img width="800" height="380" src="logotrans.jpg" alt="sMisr Elkhir Foundation" />
-                                        </a>
-                                        <div class="post-body">
-                                            <h2 class="entxt"><a href="/gallary/no.html">Misr Elkhir Foundation:</a></h2>
-                                            <p class="entxt">In January of 2015 , a financing concrete agreement has been signed to donate with The electronic program of the scientific competitions judging , which was created according to the suggestion of Dr. Ihab Barakat , the founder of NECTAR foundation , and he also designed the program and supervised on its making.</p>
-                                            <h2 class="artxt"><a href="/gallary/no.html">تعاون مع مؤسسة مصر الخير:</a></h2>
-                                            <p class="artxt">في يناير لعام 2015 تم توقيع إتفاقية تمويل عيني للتبرع بالبرنامج الإلكتروني الخاص بتحكيم المسابقات العلمية والذي تم انشائه بناء على اقتراح الدكتور إيهاب بركات مؤسس مؤسسة نكتار حيث قام أيضا بتصميم البرنامج والإشراف على تنفيذة</p>
-                                        </div>
-                                    </article>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="more-link"></div>
-                    </div>
-                </div>
-            </div>
+
+            <iframe id="ifMedia" src="" width="100%" height="7840"></iframe>
+
         </section>
         <section class="page-section Services-page page-section-63 en">
             <div class="row menu-row">
@@ -807,73 +477,7 @@
                     <a href="#Services" class="lang en_active" onclick="en()">EN</a>
                 </div>
             </div>
-            <div class="row clear-fix">
-                <div class="large-12 columns services-divs">
-                    <h3 class="text-center small-title">What we provide?</h3>
-
-                    <div class="large-4 columns senior all Default Nanotechnology four">
-                        <div class="service-div text-center">
-                            <div class="icon-container green-bg"><img src="assets/images/Buckminsterfullerene-perspective-3D-balls.png" width="80px" style="margin-left: -7px;margin-top: -10px;max-width:100px;">
-                            </div>
-                            <br>
-                            <h3>Nanotechnology</h3>
-                            <p class="text-left">The foundation currently is seeking on making an international agreement with top universities as Pennsylvania University, in USA in the field of nanotechnology and teaching online, to give an academic diploma degree , and master in the field of nanotechnology as well , and that's because of the importance of this field and its significant impact in all various specializations.</p>
-                        </div>
-                    </div>
-                    <div class="large-4 columns junior all Default STEM four">
-                        <div class="service-div text-center">
-                            <div class="icon-container orange-bg"><img src="assets/images/STEM-Image.png" width="100px" style="max-width:100px;margin-left: -15px;">
-                            </div>
-                            <br>
-                            <h3>STEM</h3>
-                            <p class="text-left">youths from different age categories. Our courses aim to provide participants with a world-class science education in order prepare a generation of young people capable of taking part in the scientific revolution of today’s world. Enrolled students undergo a preparatory course of training on Academic English and scientific terms and then receive their courses on the scientific field selected by them. Courses are offered in STEM-related topics (Science, Technology, Engineering &amp; Mathematics) using interdisciplinary, interactive, and applied approach through inquiry-based projects .</p>
-                        </div>
-                    </div>
-                    <div class="large-4 columns senior all Default Entrepreneurship three">
-                        <div class="service-div text-center four">
-                            <div class="icon-container pink-bg three"><i class="fa fa-money fa-3"></i>
-                            </div>
-                            <br>
-                            <h3>Entrepreneurship &amp; Techno-preneurship</h3>
-                            <p class="text-left">The foundation has recently seeked on spreading the benefits of Entrepreneurship because of its ability to motivate economic and social development in so many ways . and it also works on spreading the soul of initiative in starting any commercial activity . And as usual , when any company starts to present an innovative product or service , they call the person who runs this work "Entrepreneur" , and usually those Entrepreneurs are seen as businessmen , and businessmen in general are willing and able to convey any new idea or invention to a successful creativity . so , we here in NECTAR consider that leadership and the ability management to build a strong team is one of the basic features of innovative projects' owners . so , we in the foundation offer you training that can help you to put the idea of your business in the lead , and set a plan to attract investments to you , and reveal opportunities in reality to you , through making studies of the state and activities , and reading knowledge which its function is to make you achieve what successful people had achieved before you , not only by knowing all the tricks and crypts which make you a successful businessman , but also by putting the success plans of former people in consideration for studying and analysis </p>
-                        </div>
-                    </div>
-                    <div class="large-4 columns junior all Default SEF four">
-                        <div class="service-div text-center">
-                            <div class="icon-container green-bg"><i class="fa fa-flask fa-3"></i>
-                            </div>
-                            <br>
-                            <h3>Science and Engineering Fairs</h3>
-                            <p class="text-left">our foundation we consider that joining scientific competitions is not an end , but one of the most important means to bring out a generation that can be full of experiences , scientific skills and training with the help of these competitions , which are considered the first starting lines to get a scientific researcher in a right professional way .</p>
-                        </div>
-                    </div>
-                    <div class="large-4 columns junior all Default STP four">
-                        <div class="service-div text-center">
-                            <div class="icon-container pink-bg"><i class="fa fa-money fa-3"></i>
-                            </div>
-                            <br>
-                            <h3>Specialized Training Program</h3>
-                            <p class="text-left">In terms of the foundation's belief that all members of the society have the right to learn and develop their skills and abilities , we are preparing specialized courses in various fields , such as medicine, engineering and entrepreneurship aiming to develop abiities and forming new skills as well .
-                                <br>* Programming courses
-                                <br>* nursing courses (for those who are not specialized in this field)
-                                <br>* Medical Equipment Maintenance courses
-                                <br>* household and electrical equipment maintenance courses
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="large-4 columns junior senior both all Default Astronomy three">
-                        <div class="service-div text-center">
-                            <div class="icon-container orange-bg"><i class="fa fa-rocket fa-3"></i>
-                            </div>
-                            <br>
-                            <h3>Space &amp; Astronomy</h3>
-                            <p class="text-left">Apollo missions inspired a whole generation of kids who wanted to grow up to be astronauts, rocket scientists, and engineers.<br> Are you of those? <br> If yes is your answer, you should know that the night sky is more than just the moon and stars, if you know when and where to look .And this is our mission here. Our main goal in nectar -space training sector- is to stimulate interest in a space-related career for students of all majors. Whether you are interested in space launch vehicles, extraterrestrial research, or colorful photos taken from space telescopes and cameras, NECTAR creates this training just for you By inspiring the next generation of space scientists and encouraging space interests, we hope to accelerate the development and exploration of space.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <iframe id="ifServices" src="" width="100%" height="1700"></iframe>
         </section>
         <section class="page-section Industry-page page-section-63 en">
             <div class="row menu-row">
@@ -892,76 +496,7 @@
                     <a href="#Industry" class="lang en_active" onclick="en()">EN</a>
                 </div>
             </div>
-            <div class="row clear-fix">
-                <div class="large-12 columns page-sub-title text-center">
-                    <p>In hac habitasse platea dictumst. Pellentesque in aliquet risus. In at consequat ipsum. Aenean leo elit, imperdiet ac volutpat ornare, mattis vel est. Aliquam rhoncus mi non tortor sodales placerat vel in dolor. Praesent lorem tellus, porta vitae enim sit amet, interdum imperdiet.</p>
-                </div>
-                <div class="large-12 columns services-divs">
-                    <h3 class="text-center small-title">What we provide?</h3>
-                    <div class="large-4 columns">
-                        <div class="service-div text-center">
-                            <div class="icon-container orange-bg"><i class="fa fa-gear fa-3"></i>
-                            </div>
-                            <h3>Web developement</h3>
-                            <p class="text-left">Cras metus sem, mattis et volutpat ac, dignissim quis arcu. Fusce pretium suscipit mauris, in rhoncus arcu. Pellentesque malesuada dolor a lorem ultrices dapibus vel eget neque.</p>
-                        </div>
-                    </div>
-                    <div class="large-4 columns">
-                        <div class="service-div text-center">
-                            <div class="icon-container green-bg"><i class="fa fa-desktop fa-3"></i>
-                            </div>
-                            <h3>Web Design</h3>
-                            <p class="text-left">Cras metus sem, mattis et volutpat ac, dignissim quis arcu. Fusce pretium suscipit mauris, in rhoncus arcu. Pellentesque malesuada dolor a lorem ultrices dapibus vel eget neque.</p>
-                        </div>
-                    </div>
-                    <div class="large-4 columns">
-                        <div class="service-div text-center">
-                            <div class="icon-container pink-bg"><i class="fa fa-money fa-3"></i>
-                            </div>
-                            <h3>Marketing</h3>
-                            <p class="text-left">Cras metus sem, mattis et volutpat ac, dignissim quis arcu. Fusce pretium suscipit mauris, in rhoncus arcu. Pellentesque malesuada dolor a lorem ultrices dapibus vel eget neque.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br/><br/>
-            <h3 class="text-center small-title">Our Prices</h3>
-            <div class="row">
-                <div class="large-4 columns">
-                    <ul class="pricing-table">
-                        <li class="title">Standard</li>
-                        <li class="price">$99.99<small>/month</small></li>
-                        <li class="description">An awesome description</li>
-                        <li class="bullet-item">1 Database</li>
-                        <li class="bullet-item">5GB Storage</li>
-                        <li class="bullet-item">20 Users</li>
-                        <li class="cta-button"><a href="#" class="button">Buy Now</a></li>
-                    </ul>
-                </div>
-                <div class="large-4 columns">
-                    <ul class="pricing-table featured">
-                        <li class="title">Featured Plan</li>
-                        <li class="price">$99.99<small>/month</small></li>
-                        <li class="description">An awesome description</li>
-                        <li class="bullet-item">1 Database</li>
-                        <li class="bullet-item">5GB Storage</li>
-                        <li class="bullet-item">20 Users</li>
-                        <li class="cta-button"><a href="#" class="button">Buy Now</a></li>
-                    </ul>
-                </div>
-                <div class="large-4 columns">
-                    <ul class="pricing-table">
-                        <li class="title">Standard</li>
-                        <li class="price">$99.99<small>/month</small></li>
-                        <li class="description">An awesome description</li>
-                        <li class="bullet-item">1 Database</li>
-                        <li class="bullet-item">5GB Storage</li>
-                        <li class="bullet-item">20 Users</li>
-                        <li class="cta-button"><a href="#" class="button">Buy Now</a></li>
-                    </ul>
-                </div>
-            </div>
-            <br/><br/>
+            <iframe id="ifIndustry" src="pages/Industry.html" width="100%" height="1050"></iframe>
         </section>
         <section class="page-section benectarian-page page-section-60 en">
             <div class="row menu-row">
@@ -1050,7 +585,7 @@
                 </div>
             </div>
             <h1> Every one in nectar has a sucsses story</h1>
-            <iframe src="#Team"></iframe>
+            <iframe id="ifTeam" src="pages/Team.html" width="100%" height="4475"></iframe>
         </section>
         <section class="page-section News-page page-section-41 en">
             <div class="row menu-row">
@@ -1462,8 +997,7 @@
                     <a href="#About" class="lang en_inactive" onclick="en()">EN</a>
                 </div>
                 <div class="large-7 columns p-l-0">
-                   <h2>عن نكتار<sub>-نكتار من التليسكوب</sub></h2>
-                    
+                    <h2>-عن نكتار -نكتار من التليسكوب</h2>
                     <hr class="title-hr">
                 </div>
                 <div class="go-back">
@@ -1518,7 +1052,7 @@
                     <li>
                         <div class="team-member-item">
                             <div class="team-member-picture">
-                                <img width="400" height="300" src="" alt="doctor" />
+                                <img width="400" height="300" alt="doctor" />
                             </div>
                             <h3 class="team-member-name">Bryan Zytoni</h3>
                             <h4>Developer</h4>
@@ -1530,7 +1064,7 @@
                     <li>
                         <div class="team-member-item">
                             <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/10.jpg" alt="Smiling man" />
+                                <img width="400" height="300" alt="Smiling man" />
                             </div>
                             <h3 class="team-member-name">Joan Alex</h3>
                             <h4>Manger</h4>
@@ -1542,7 +1076,7 @@
                     <li>
                         <div class="team-member-item">
                             <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/11.jpg" alt="College student" />
+                                <img width="400" height="300" alt="College student" />
                             </div>
                             <h3 class="team-member-name">Carl Vandiresh</h3>
                             <h4>Designer</h4>
@@ -1555,7 +1089,7 @@
                     <li>
                         <div class="team-member-item">
                             <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/11.jpg" alt="College student" />
+                                <img width="400" height="300" alt="College student" />
                             </div>
                             <h3 class="team-member-name">Carl Vandiresh</h3>
                             <h4>Designer</h4>
@@ -1570,7 +1104,7 @@
                     <li>
                         <div class="team-member-item">
                             <div class="team-member-picture">
-                                <img width="400" height="300" src="assets/images/11.jpg" alt="College student" />
+                                <img width="400" height="300" alt="College student" />
                             </div>
                             <h3 class="team-member-name">Azza Faiad</h3>
                             <h4>Team member</h4>
@@ -2223,26 +1757,60 @@
 
     </div>
 
-    
-    <script type="text/javascript" src="assets/js/speed.js"></script>
+    <script async type="text/javascript" src="assets/js/Services-filter.js"></script>
     <script type='text/javascript' src='assets/js/mohannad.js'></script>
-    <script type='text/javascript' src='assets/js/jquery/jquery.js'></script>
-    <script type='text/javascript' src='assets/js/jquery/jquery-migrate.min.js'></script>
-    <script type='text/javascript' src='assets/js/foundation.min.js'></script>
+    <script async type='text/javascript' src='assets/js/jquery/jquery.js'></script>
+    <script async type='text/javascript' src='assets/js/jquery/jquery-migrate.min.js'></script>
+    <script async type='text/javascript' src='assets/js/foundation.min.js'></script>
     <script type='text/javascript' src='assets/js/modernizr.custom.js'></script>
-    <script type='text/javascript' src='assets/js/foundation/foundation.section.js'></script>
-    <script type='text/javascript' src='assets/js/responsiveslides.js'></script>
-    <script type='text/javascript' src='assets/js/scripts.js'></script>
+    <script async type='text/javascript' src='assets/js/foundation/foundation.section.js'></script>
+    <script async type='text/javascript' src='assets/js/responsiveslides.js'></script>
+    <script async type='text/javascript' src='assets/js/scripts.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type='text/javascript' src='assets/js/first-time.js'></script>
-    <script src="/assets/js/flipclock.min.js"></script>
+    <script async type='text/javascript' src='assets/js/first-time.js'></script>
+    <script type='text/javascript' src='assets/js/speed.js'></script>
 
+    <!-- Hotjar Tracking Code for nectarfoundation.org -->
+    <script>
+        (function(h, o, t, j, a, r) {
+            h.hj = h.hj || function() {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 416855,
+                hjsv: 5
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
 
+    </script>
+    <!-- Google Tracking Code for nectarfoundation.org -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-92226702-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <!-- jQuery library -->
     <script src="assets/js/jquery.min.js"></script>
 
     <script type='text/javascript' src='assets/js/wd-ajax-load/js/load-posts.js'></script>
-
 </body>
 
 </html>
-

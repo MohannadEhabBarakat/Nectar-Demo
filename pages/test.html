@@ -1,0 +1,71 @@
+<html>
+
+<head>
+
+    <!-- 1 -->
+    <link href="../assets/css/dropzone.css" type="text/css" rel="stylesheet" />
+
+    <!-- 2 -->
+    <script src="../assets/js/dropzone.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        // Dropzone.autoDiscover = false;
+        var x = Array;
+        var i=0;
+        Dropzone.options.myAwesomeDropzone = {
+            paramName: "file", // The name that will be used to transfer the file
+            maxFilesize: 1, // MB
+            acceptedFiles: ".jpeg,.jpg,.png,.gif,.JPEG,.JPG,.PNG,.GIF",
+            maxFiles: 1,
+            resizeWidth: 250,
+            renameFilename: function(filename) {
+                x [i] = new Date().getTime() + '_' + filename;
+                i=i+1;
+                return x [i-1];
+            },
+            accept: function(file, done) {
+                if (file.name == "justinbieber.jpg") {
+                    done("Naha, you don't.");
+                } else {
+                    done();
+                }
+            },
+            maxfilesexceeded: function(file) {
+                this.removeAllFiles();
+                this.addFile(file);
+                $.ajax({
+                    url: 'img_del.php',
+                    data: {
+                        x: x[x.length-1]
+                    },
+                    success: function(data) {
+                        alert("hi "+data);
+                    }
+
+                });
+            }
+        };
+
+    </script>
+</head>
+
+<body>
+    <style>
+        .dropzone {
+            width: 250px;
+            height: 250px;
+        }
+        
+        .dz-max-files-reached {
+            background-color: rgba(255, 0, 0, 0.05);
+        }
+
+    </style>
+
+    <!-- 3 -->
+    <form action="upload.php" class="dropzone" id="myAwesomeDropzone"></form>
+
+</body>
+
+</html>

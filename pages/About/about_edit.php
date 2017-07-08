@@ -1,6 +1,6 @@
 <?php 
 session_start();
-
+if (isset($_SESSION["al"])){
 
 $h= $_GET["h"];
 $p= $_GET["p"];
@@ -26,5 +26,8 @@ $par->nodeValue = $p;
 echo 'Wrote: ' . $dom->saveHTMLFile("About.html") . ' bytes';
 echo ("ya rab :)".$h3);
 libxml_clear_errors();
+    }else{
+    echo ("ya rab :) adkol");
+}
 ?>
 

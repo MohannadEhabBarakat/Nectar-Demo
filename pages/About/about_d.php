@@ -1,6 +1,6 @@
 <?php 
 session_start();
-
+if (isset($_SESSION["al"])){
 //if (isset($_GET["e"]) &&  isset($_GET["max"]))  
 //{    
     $e= $_GET["e"];
@@ -32,4 +32,7 @@ $parent->removeChild($hdiv);
 echo 'Wrote: ' . $dom->saveHTMLFile("About.html") . ' bytes';
 echo ("ya rab :)");
 libxml_clear_errors();
+}else{
+    echo ("ya rab :) adkol");
+}
 ?>
