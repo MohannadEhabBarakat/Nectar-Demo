@@ -374,7 +374,9 @@ i.fa-star-o {
 
 .benectarian-page form,
 .benectarianar-page form {
-    margin-left: 50px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 }
 
 .homear-page span:not(.anim),

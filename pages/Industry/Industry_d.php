@@ -13,7 +13,7 @@ $dom->validateOnParse = true;
 // we want a nice output
 $dom->formatOutput = true;
 libxml_use_internal_errors(true);
-$dom->loadHtmlFile( 'team.html');
+$dom->loadHtmlFile( 'Industry.html');
 
 $l = $dom->getElementById($e);
 
@@ -22,7 +22,7 @@ $parent->removeChild($l);
 
 
 // Save the resulting HTML
-echo 'Wrote: ' . $dom->saveHTMLFile("team.html") . ' bytes';
+echo 'Wrote: ' . $dom->saveHTMLFile("Industry.html") . ' bytes';
 echo ("ya rab :) e".$e." max".$max);
 libxml_clear_errors();
 }else{

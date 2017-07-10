@@ -1,4 +1,6 @@
 <?php
+session_start();
+if (isset($_SESSION["al"])){
 $ds = DIRECTORY_SEPARATOR;  //1
  
 $storeFolder = '';   //2
@@ -13,5 +15,8 @@ if (!empty($_FILES)) {
  
     move_uploaded_file($tempFile,$targetFile); //6
      
+}
+    }else{
+    echo ("ya rab :) adkol");
 }
 ?> 

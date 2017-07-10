@@ -1,40 +1,43 @@
 <?php 
 session_start();
 if (isset($_SESSION["al"])){
-
-$m = $_GET["m"];
-$n = $_GET["n"];
-$max= $_GET["max"];
+                                
+$cls = $_GET["cls"];
+$h3 = $_GET["h3"];
+$p = $_GET["p"];
+$color = $_GET["color"];
+$max = $_GET["max"];
 $maxNum=(int)(substr($max,1));
+
 
 // Load the HTML document
 $dom = new DOMDocument;
 
 // we want a nice output
 $dom->formatOutput = true;
+$dom->validateOnParse = true;
 
 libxml_use_internal_errors(true);
-$dom->loadHtmlFile( 'About.html');
+$dom->loadHtmlFile( 'Services.html');
 
-
-$parent = $dom->getElementsByTagName('section')->item(0)->childNodes->item(0);
+    
+$parent = $dom->getElementById($max);
 //first parent div
-$div = new DOMElement('div');
-$hr = new DOMElement('hr');
-$parent->appendChild($hr);
-$parent->appendChild($div);
-$hr->setAttribute("class", "about-hr");
-$div->setAttribute("class", "large-12 columns page-sub-title text-center");
-$hr->setAttribute("id", "a".($maxNum+1));
-$div->setAttribute("id", "a".($maxNum+2));
 
+$dev0 = new DOMElement('div');
+$parent->appendChild($dev0);
+$dev0->setAttribute("class", "large-4 columns");
+$dev0->setAttribute("id", "a".($maxNum+1));
+    
 $i1 = new DOMElement('i');
 $i2 = new DOMElement('i');
 $i3 = new DOMElement('i');
+$br = new DOMElement('br');
 
-$div->appendChild($i1);
-$div->appendChild($i2);
-$div->appendChild($i3);
+$dev0->appendChild($i1);
+$dev0->appendChild($i2);
+$dev0->appendChild($i3);
+$dev0->appendChild($br);
 
 $i1->setAttribute("class", "fa fa-ellipsis-v sp");
 $i1->setAttribute("aria-hidden", "true");
@@ -45,19 +48,10 @@ $i2->setAttribute("onclick", "edit(this)");
 
 $i3->setAttribute("class", "fa fa-window-close sp");
 $i3->setAttribute("aria-hidden", "true");
-$i3->setAttribute("onclick", "del(this)");
-
-$h3 = new DOMElement('h3');
-$div->appendChild($h3);
-$h3->setAttribute("class", "imp-en-word no-font");
-$h3->nodeValue = $m;
-
-$p = new DOMElement('p');
-$div->appendChild($p);
-$p->nodeValue = $n;
+//$i3->setAttribute("onclick", "del(this)");
 
 $divch1 = new DOMElement('div');
-$div->appendChild($divch1);
+$dev0->appendChild($divch1);
 $divch1->setAttribute("class", "button-container-2 edit_b");
 
 $span1 = new DOMElement('span');
@@ -74,7 +68,7 @@ $b1->nodeValue = "Save";
 
 
 $divch2 = new DOMElement('div');
-$div->appendChild($divch2);
+$dev0->appendChild($divch2);
 $divch2->setAttribute("class", "button-container-1 edit_b");
 
 $span2 = new DOMElement('span');
@@ -89,14 +83,36 @@ $b2->setAttribute("type", "button");
 $b2->setAttribute("name", "Hover");
 $b2->nodeValue = "Cancle";
 
-$parent->setAttribute("id", "p".($maxNum+2));
+$dev1 = new DOMElement('div');
+$dev0->appendChild($dev1);    
+$dev1->setAttribute("class", "service-div text-center");
+    
+$dev2 = new DOMElement('div');
+$dev1->appendChild($dev2);    
+$dev2->setAttribute("class", "icon-container ".$color);
+
+$is = new DOMElement('i');
+$dev2->appendChild($is); 
+$is->setAttribute("class", "fa fa-".$cls." fa-3");
+
+$h_3 = new DOMElement('h3');
+$dev1->appendChild($h_3);
+$h_3->setAttribute("class", "team-member-name");
+$h_3->nodeValue = $h3;
+    
+$p2 = new DOMElement('p');
+$dev1->appendChild($p2);
+$h_3->setAttribute("class", "text-left");
+$p2->nodeValue = $p;
+
+$parent->setAttribute("id", "p".($maxNum+1));
 
 
 // Save the resulting HTML
-echo 'Wrote: ' . $dom->saveHTMLFile("About.html") . ' bytes';
+echo 'Wrote: ' . $dom->saveHTMLFile("Services.html") . ' bytes';
 echo ("ya rab :)");
 libxml_clear_errors();
-    }else{
+  }else{
     echo ("ya rab :) adkol");
 }
 ?>

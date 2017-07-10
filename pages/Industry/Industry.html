@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Nectar foundation</title>
+    <link rel="icon" href="../../logotrans.jpg">
+    <link rel="stylesheet" id="font-awesome-four-css" href="../../assets/css/font-awesome-4-menus/css/font-awesome.min.css" type="text/css" media="all">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../assets/css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../assets/css/colors.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../assets/css/edit.css" type="text/css" media="all">
+    <link rel="stylesheet" id="responsiveslides-css" href="../../assets/css/responsiveslides.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../assets/css/mohannad.css" type="text/css" media="all">
+    <link rel="stylesheet" id="reponsive-css" href="../../assets/css/reponsive.css" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Lobster%7CReem+Kufi" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="ea.js"></script>
+    <script>
+        $(document).ready(function() {
+            var moha = 0;
+            if (moha == 0) {
+                $('body').click(function() {
+                    $.ajax({
+                        url: '../ch.php',
+                        success: function(data) {
+                            if (data == 1) {
+                                sp = document.getElementsByClassName("sp");
+                                moha = 1;
+                                var i;
+                                for (i = 0; i < sp.length; i++) {
+                                    sp[i].style.visibility = "visible";
+                                }
+                            }
+                            else {
+                                sp = document.getElementsByClassName("sp");
+                                moha = 1;
+                                var i;
+                                for (i = 0; i < sp.length; i++) {
+                                    sp[i].style.visibility = "hidden";
+                                }
+                            }
+                        }
+
+                    });
+                });
+            }
+        });
+        $(document).ready(function() {
+            $('.fa-window-close').click(function() {
+                var e = $(this).parent().attr("id")
+                var max = $(this).parent().parent().attr("id")
+                alert(e)
+                alert(max)
+                alert("DS")
+                $.ajax({
+                    url: 'Industry_d.php',
+                    type: 'GET',
+                    data: {
+                        e: e,
+                        max: max
+                    },
+                    success: function(data) {
+                        alert(data);
+
+                    }
+                });
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+
+            })
+
+            $('.edSave').click(function() {
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+            })
+            $('#brn2').click(function() {
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+            })
+            $('#brn1').click(function() {
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+    <style>
+        .large-4 {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        
+        [class*="column"]+[class*="column"]:last-child {
+            float: left;
+        }
+
+    </style>
+    <button class="sp" style="background: #EE4400;z-index: 100;position: fixed;right: 0;"><a href="../log_out.php">log out</a></button>
+
+    <section class="page-section Industry-page page-section-63 en" style="visibility: visible;min-height: 100%;height: auto;">
+        <div class="row clear-fix">
+            <div class="large-12 columns page-sub-title text-center">
+                <p>In hac habitasse platea dictumst. Pellentesque in aliquet risus. In at consequat ipsum. Aenean leo elit, imperdiet ac volutpat ornare, mattis vel est. Aliquam rhoncus mi non tortor sodales placerat vel in dolor. Praesent lorem tellus, porta vitae enim sit amet, interdum imperdiet.</p>
+            </div>
+            <div class="large-12 columns services-divs" id="p7">
+                <h3 class="text-center small-title">What we provide?</h3>
+                <div class="large-4 columns" id="a1">
+                    <i class="fa fa-ellipsis-v sp" aria-hidden="true"></i>
+                    <i class="fa fa-pencil-square-o sp" aria-hidden="true" onclick="edit(this)"></i>
+                    <i class="fa fa-window-close sp" aria-hidden="true" onclick=""></i>
+                    <br>
+                    <div class="button-container-2 edit_b">
+                        <span class="mas">Save</span><button class="edSave" type="button" name="Hover">Save</button>
+                    </div>
+                    <div class="button-container-1 edit_b">
+                        <span class="mas">Cancle</span><button onclick="edit_cancel(this)" type="button" name="Hover">Cancle</button>
+                    </div>
+                    <div class="service-div text-center">
+                        <div class="icon-container orange-bg">
+                            <i class="fa fa-gear fa-3"></i>
+                        </div>
+                        <h3>Web developement</h3>
+                        <p class="text-left">Cras metus sem, mattis et volutpat ac, dignissim quis arcu. Fusce pretium suscipit mauris, in rhoncus arcu. Pellentesque malesuada dolor a lorem ultrices dapibus vel eget neque.</p>
+                    </div>
+                </div>
+                <div class="large-4 columns" id="a2">
+                    <i class="fa fa-ellipsis-v sp" aria-hidden="true"></i>
+                    <i class="fa fa-pencil-square-o sp" aria-hidden="true" onclick="edit(this)"></i>
+                    <i class="fa fa-window-close sp" aria-hidden="true" onclick=""></i>
+                    <br>
+                    <div class="button-container-2 edit_b">
+                        <span class="mas">Save</span><button class="edSave" type="button" name="Hover">Save</button>
+                    </div>
+                    <div class="button-container-1 edit_b">
+                        <span class="mas">Cancle</span><button onclick="edit_cancel(this)" type="button" name="Hover">Cancle</button>
+                    </div>
+                    <div class="service-div text-center">
+                        <div class="icon-container green-bg">
+                            <i class="fa fa-desktop fa-3"></i>
+                        </div>
+                        <h3>Web Design</h3>
+                        <p class="text-left">Cras metus sem, mattis et volutpat ac, dignissim quis arcu. Fusce pretium suscipit mauris, in rhoncus arcu. Pellentesque malesuada dolor a lorem ultrices dapibus vel eget neque.</p>
+                    </div>
+                </div>
+                <div class="large-4 columns" id="a3">
+                    <i class="fa fa-ellipsis-v sp" aria-hidden="true"></i>
+                    <i class="fa fa-pencil-square-o sp" aria-hidden="true" onclick="edit(this)"></i>
+                    <i class="fa fa-window-close sp" aria-hidden="true" onclick=""></i>
+                    <br>
+                    <div class="button-container-2 edit_b">
+                        <span class="mas">Save</span><button class="edSave" type="button" name="Hover">Save</button>
+                    </div>
+                    <div class="button-container-1 edit_b">
+                        <span class="mas">Cancle</span><button onclick="edit_cancel(this)" type="button" name="Hover">Cancle</button>
+                    </div>
+                    <div class="service-div text-center">
+                        <div class="icon-container pink-bg">
+                            <i class="fa fa-money fa-3"></i>
+                        </div>
+                        <h3>Marketing</h3>
+                        <p class="text-left">Cras metus sem, mattis et volutpat ac, dignissim quis arcu. Fusce pretium suscipit mauris, in rhoncus arcu. Pellentesque malesuada dolor a lorem ultrices dapibus vel eget neque.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="large-4 columns" id="a7">
+                    <i class="fa fa-ellipsis-v sp" aria-hidden="true"></i><i class="fa fa-pencil-square-o sp" aria-hidden="true" onclick="edit(this)"></i><i class="fa fa-window-close sp" aria-hidden="true"></i><br>
+                    <div class="button-container-2 edit_b">
+                        <span class="mas">Save</span><button class="edSave" type="button" name="Hover">Save</button>
+                    </div>
+                    <div class="button-container-1 edit_b">
+                        <span class="mas">Cancle</span><button onclick="edit_cancel(this)" type="button" name="Hover">Cancle</button>
+                    </div>
+                    <div class="service-div text-center">
+                        <div class="icon-container green-bg"><i class="fa fa-gear fa-3"></i></div>
+                        <h3 class="text-left">mn</h3>
+                        <p>kjncx,ncvx</p>
+                    </div>
+                </div>
+            </div>
+            <i class="fa fa-plus-circle sp" aria-hidden="true" onclick="dis()" id="add"></i>
+            <div id="flot">
+                <div>
+                    <span>Icon</span><input id="icon" type="text"><br><span>Name</span><input id="h_3" type="text"><br><span>Data</span><textarea id="par" type="text"></textarea><br><select id="color"><option value="orange-bg">Orange</option>
+<option value="green-bg">Green</option>
+<option value="pink-bg">Pink</option></select><button onclick="brn()" id="brn1">Save</button>
+                    <button onclick="cancel()">Calncel</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
