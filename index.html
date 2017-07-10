@@ -28,6 +28,7 @@
     <link rel='stylesheet' href='assets/css/mohannad.css' type='text/css' media='all' />
     <link rel='stylesheet' id='reponsive-css' href='assets/css/reponsive.css' type='text/css' media='all' />
     <link href="https://fonts.googleapis.com/css?family=Lobster|Reem+Kufi" rel="stylesheet">
+    <link href="assets/css/dropzone.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body onload="wait()">
@@ -516,43 +517,76 @@
                 </div>
             </div>
             <div class="large-12 formdiv ">
-                <form>
-                    <p style="color:red;">*required</p>
+                <div id="benectarian">
                     <div id="pageone">
+                        <p style="color:red;">*required</p>
+                        
                         <br> Picture:
-                        <input type="file" id=""><br>
+                        <form action="pages/upload_be.php" class="dropzone" id="myAwesomeDropzone"></form><br>
                         <div>
                             <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                            <input type="text" id="" required placeholder="*Full name:"></div><br>
+                            <input type="text" id="name" placeholder="*Full name:"></div><br>
                         <div>
                             <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
-                            <input type="text" id="" required placeholder="*Current city:"></div><br>
+                            <input type="text" id="city" placeholder="*Current city:"></div><br>
                         <div>
                             <span class="input-group-addon"><i class="fa fa-home fa-fw"></i></span>
-                            <input type="text" id="" placeholder="Nationality:"></div><br>
+                            <input type="text" id="Nationality" placeholder="Nationality:"></div><br> Just few steps to finish
+                        <progress value="30" max="100"></progress>30%<br>
+                        <button onclick="next(1)">Next &rArr;</button>
+                        <p id="p1" style="color:red;font-weight: bold;"></p>
+                    </div>
+
+                    <div id="pagetwo">
+                        
                         <div>
                             <span class="input-group-addon"><i class="fa fa-certificate fa-fw"></i></span>
-                            <input type="text" id="" required placeholder="*Educational Qualification:"></div><br>
+                            <input type="text" id="Qualification" placeholder="*Educational Qualification:"></div><br>
+                        <div>
+                            *CV/Bio/Previous experience :
+                            <br>
+                            <form action="pages/upload_pdf.php" class="dropzone" id="myzone"></form>
+                            <br>
+                        </div><br> You are about to finish
+                        <progress value="60" max="100"></progress>60%<br>
+                        <button onclick="next(1)">&lArr; Back</button>
+                        <button onclick="next(2)">Next &rArr;</button>
+                        <p id="p2" style="color:red;font-weight: bold;"></p>
+                    </div>
+                    <div id="pagethree">
+                        
                         <div>
                             <span class="input-group-addon"><i class="fa fa-facebook-square fa-fw"></i></span>
-                            <input type="url" id="" placeholder="Facebook account:"></div><br> *CV/Bio/Previous experience :<input type="file" id="" required><br>
-                    </div>
-                    <div id="pagetwo">
+                            <input type="url" id="FB" placeholder="Facebook account:">
+                        </div>
+                        <br>
+                        <div>
+                            <span class="input-group-addon"><i class="fa fa-linkedin-square fa-fw"></i></span>
+                            <input type="url" id="linkedin" placeholder="Linked In account:">
+                        </div>
+                        <br>
                         <div>
                             <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                            <input class="form-control" type="text" placeholder="Email address" required></div><br>
+                            <input class="form-control" id="Email" type="text" placeholder="*Email address">
+                        </div>
+                        <br>
+
                         <div>
                             <span class="input-group-addon"><i class="fa fa-mobile fa-fw"></i></span>
-                            <input type="number" id="" required placeholder="*Phone number"></div><br>
+                            <input type="tel" id="Phone" placeholder="*Phone number">
+                        </div>
+                        <br>
                         <div>
-                            <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
-                            <input type="number" id="" placeholder="Another phone number"></div><br>
-                        <div>
-                            <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-                            <input type="date" id="Birth day date:"></div><br> *Gender:
-                        <input type="radio" id="male" class="gender" name="gender" required>male
-                        <input type="radio" id="female" class="gender" name="gender">female<br> *The team you want to join :
-                        <select name="Specialization" required>
+                        
+                        <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+                        <input type="date" id="Birth"></div><br> 
+                        
+                        *Gender:    
+                        <input type="radio" id="male" class="gender" name="gender" value="male">male
+                        <input type="radio" id="female" class="gender" name="gender" value="female">female<br> 
+                        
+                        *The team you want to join :
+                        <select name="Specialization" id="Specialization">
                             <option value="Public relations (Local)">Public relations (Local)</option>
                             <option value="Foreign Public relations">Foreign Public relations</option>
                             <option value="Pre-University Sector">Pre-University Sector</option>
@@ -564,10 +598,19 @@
                             <option value="Planning">Planning</option>
                             <option value="Scientific Guidance">Scientific Guidance</option>
                             <option value="Entrepreneurship">Entrepreneurship</option>     
-                </select>
-                        <br><input type="submit" id="">
+                        </select>
+                        <br> last step press submit
+                        <progress value="90" max="100"></progress>90%<br>
+                        <button onclick="next(2)">&lArr; Back</button>
+                        <button onclick="next(3)">Submit &rArr;</button>
+                        <p id="p3" style="color:red;font-weight: bold;"></p>
                     </div>
-                </form>
+                    <div id="pagefour">
+                        please wait for confermation massage
+                        <progress value="100" max="100" class="final_alert">100%</progress><br>
+                        <button onclick="next(4)" class="final_alert">Well Done! you can Go to first stage for more submetions </button>
+                    </div>
+                </div>
             </div>
 
 
@@ -1761,17 +1804,16 @@
 
 
     </div>
-
+    <script src="assets/js/dropzone.js"></script>
     <script async type="text/javascript" src="assets/js/Services-filter.js"></script>
     <script type='text/javascript' src='assets/js/mohannad.js'></script>
-    <script async type='text/javascript' src='assets/js/jquery/jquery.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script async type='text/javascript' src='assets/js/jquery/jquery-migrate.min.js'></script>
     <script async type='text/javascript' src='assets/js/foundation.min.js'></script>
     <script type='text/javascript' src='assets/js/modernizr.custom.js'></script>
     <script async type='text/javascript' src='assets/js/foundation/foundation.section.js'></script>
     <script async type='text/javascript' src='assets/js/responsiveslides.js'></script>
     <script async type='text/javascript' src='assets/js/scripts.js'></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script async type='text/javascript' src='assets/js/first-time.js'></script>
     <script type='text/javascript' src='assets/js/speed.js'></script>
 

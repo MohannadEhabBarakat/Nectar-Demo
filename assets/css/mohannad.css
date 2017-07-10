@@ -3,7 +3,7 @@
 }
 
 .home-page,
-.homear-page {
+.homear-page, .benectarian-page {
     overflow: scroll;
 }
 
@@ -145,7 +145,6 @@ p>.imp-word:not(.imp-word) {
     right: 50px;
     width: auto;
 }
-
 .ar:not(homear-page) .go-back {
     float: right;
 }
@@ -345,7 +344,7 @@ i.fa-star-o {
     text-align: right;
 }
 
-.formdiv {
+.formdiv:not(.benectarian-page .formdiv) {
     display: inline-block;
 }
 
@@ -371,8 +370,22 @@ i.fa-star-o {
     border-image: initial;
     border-radius: 4px;
 }
-
-.benectarian-page form,
+#pageone, #pagetwo, #pagethree, #pagefour{
+    background-color: rgba(255, 255, 255, 0.47);
+    display: block;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 25px;
+    border: 5px solid;
+    border-color: rgb(41, 41, 219);
+    padding: 50px;
+    overflow: hidden;
+}
+#pagetwo, #pagethree, #pagefour{ 
+    display: none;
+}
+.final_alert{visibility: hidden;}
+#benectarian,
 .benectarianar-page form {
     display: inline-block;
     width: 100%;
